@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Devismita Panda — PhD researcher in star formation, astrochemistry and molecular complexity.">
+<title>Devismita Panda | Astrophysics & Astrochemistry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050812; --panel:#0b1020; --panel2:#10182c; --text:#eef3ff;
+  --muted:#a8b4ca; --line:rgba(255,255,255,.10); --cyan:#6ee7ff;
+  --violet:#a78bfa; --gold:#f6c76d; --max:1120px;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 80% 5%,#16245a 0,transparent 28%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.65}
+a{color:inherit;text-decoration:none}.container{max-width:var(--max);margin:auto;padding:0 24px}
+nav{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(5,8,18,.72);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.navin{height:68px;display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:"Space Grotesk";font-weight:700;letter-spacing:.3px}
+.brand span{color:var(--cyan)}
+.navlinks{display:flex;gap:20px;font-size:13px;color:var(--muted)}
+.navlinks a:hover{color:white}
+.hero{min-height:92vh;display:grid;place-items:center;padding:120px 0 70px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,8,18,.97) 8%,rgba(5,8,18,.78) 47%,rgba(5,8,18,.38)),url("https://www.cfa.harvard.edu/sites/default/files/styles/max_650x650/public/imported_image/su201016.jpg?itok=9S7d7IL8") center/cover;opacity:.92;filter:saturate(1.15)}
+.hero .container{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:60px;align-items:center}
+.kicker{color:var(--cyan);text-transform:uppercase;letter-spacing:2px;font-size:12px;font-weight:700}
+h1,h2,h3{font-family:"Space Grotesk";line-height:1.08}
+h1{font-size:clamp(44px,7vw,78px);margin:14px 0 20px;max-width:760px}
+.hero p{font-size:18px;color:#d3dcef;max-width:650px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 17px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.06);font-weight:600;font-size:14px}
+.btn.primary{background:linear-gradient(135deg,var(--cyan),var(--violet));color:#07101d;border:0}
+.portrait-wrap{justify-self:end;position:relative}
+.portrait{width:min(330px,72vw);aspect-ratio:1/1;border-radius:26px;object-fit:cover;border:1px solid rgba(255,255,255,.22);box-shadow:0 25px 90px rgba(0,0,0,.55)}
+.badge{position:absolute;right:-14px;bottom:18px;background:rgba(10,15,30,.9);border:1px solid var(--line);padding:11px 14px;border-radius:12px;font-size:12px;color:#dce7ff}
+section{padding:95px 0;border-top:1px solid var(--line)}
+.section-title{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:35px}
+.section-title h2{font-size:38px;margin:0}.section-title p{color:var(--muted);max-width:550px;margin:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.grid3{display:grid;grid-template-columns:repeat(3, 1fr);gap:22px}
+.card{background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:18px;padding:26px}
+.card h3{margin-top:0;font-size:21px; margin-bottom:8px;}
+.muted{color:var(--muted)}
+.tag{display:inline-block;border:1px solid rgba(110,231,255,.25);color:var(--cyan);padding:5px 9px;border-radius:999px;font-size:11px;margin:3px 3px 3px 0}
+.pub{padding:18px 0;border-bottom:1px solid var(--line)}
+.pub:last-child{border-bottom:0}.year{color:var(--gold);font-weight:700;font-size:13px}
+.timeline{border-left:1px solid rgba(110,231,255,.3);padding-left:24px}.timeline article{position:relative;margin:0 0 26px}.timeline article:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--cyan);position:absolute;left:-29px;top:9px}
+.gallery-img{width:100%; height:250px; object-fit:cover; border-radius:12px; border:1px solid var(--line);}
+footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
+footer a{color:var(--cyan)}
+.small{font-size:12px;color:#8794ac}
+.narrative p { margin-bottom: 18px; }
+.narrative p:last-child { margin-bottom: 0; }
+.q-hl { color: var(--cyan); font-weight: 500; }
+@media(max-width:800px){
+ .navlinks{display:none}.hero .container,.grid2,.grid3{grid-template-columns:1fr}.hero{padding-top:110px}.portrait-wrap{justify-self:start}
+ .section-title{display:block}.section-title p{margin-top:12px}
+}
+</style>
+</head>
+<body>
+<nav><div class="container navin">
+  <a class="brand" href="#home">Devismita <span>Panda</span></a>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#research">Research</a><a href="#publications">Publications</a>
+    <a href="#cv">CV</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<header id="home" class="hero">
+<div class="container">
+  <div>
+    <div class="kicker">Massive Star Formation · Astrochemistry · Astrophysics</div>
+    <h1>Understanding the Chemistry of Massive Star Formation.</h1>
+    <p>Currently, I study how the formation and evolution of organic molecules are linked to the physical conditions within massive dense cores—interpreting their chemical footprints to reveal the physical conditions during high-mass star formation.</p>
+    <div class="btns">
+      <a class="btn primary" href="#research">Explore my research ↓</a>
+      <a class="btn" href="#publications">Selected publications</a>
+    </div>
+  </div>
+  <div class="portrait-wrap">
+    <img class="portrait" src="assets/portrait.jpg" alt="Portrait of Devismita Panda">
+  </div>
+</div>
+</header>
+
+<section id="about"><div class="container">
+ <div class="grid2">
+  <div class="card">
+    <h3>Hello!</h3>
+    <p>I am a PhD student in Astrophysics at the Laboratoire d’Astrophysique de Bordeaux (LAB), Bordeaux, France with Dr. Timea Csengeri. I study the fragmentation and molecular complexity in Cygnus-X massive dense cores.</p>
+    <p class="muted">Current scientific interests include protostellar envelopes, hot cores, complex organic molecules, spectral line identification and modeling, fragmentation, source extraction and the connection between physical condition and chemical composition.</p>
+  </div>
+  <div class="card">
+    <h3>Observational tools</h3>
+    <p><span class="tag">NOEMA</span><span class="tag">ALMA</span><span class="tag">IRAM 30m</span><span class="tag">Python</span><span class="tag">XCLASS</span><span class="tag">GILDAS</span><span class="tag">CASA</span><span class="tag">CARTA</span></p>
+    <p>When I'm not immersed in research, you'll often find me drawing, painting, reading non-fiction and philosophy, or behind a camera.</p>
+    <p>Don't hesitate to contact me for scientific discussions, collaborations, and opportunities!</p>
+  </div>
+ </div>
+</div></section>
+
+<section id="research"><div class="container">
+  <div class="section-title"><h2>Research</h2><p>Investigating the physical and chemical origins of complex organics through high-resolution & large bandwidth millimeter observations.</p></div>
+  
+  <div class="card narrative" style="margin-bottom: 22px;">
+    <h3>Decoding the Origin of Complex Organics in Massive Star-Forming Environments</h3>
+    
+    <p>We often wonder: <span class="q-hl">Where do the building blocks of life originate?</span> Complex Organic Molecules (COMs) are the fundamental chemical precursors to life as we know it, and during massive star formation, a variety of COMs emerge, such as sugars, alcohols, aldehydes, and even unsaturated carbon chain species. I am deeply driven to understand their origin, abundances, and chemical evolution, in connection with the different physical processes during massive star formation.</p>
+    
+    <p>Massive stars form in the densest regions of molecular clouds with thick envelopes of dust and gas around them. This high dust obscuration makes the direct observation of protostars very difficult. Then, <span class="q-hl">How do we uncover their secrets?</span> By observing Dust. We trace the dust emission with highly sensitive observations that tell us about the mass and density of these massive envelopes.</p>
+
+    <p><span class="q-hl">And how do we know what COMs they seed into their surroundings?</span> By observing the spectrum towards these massive envelopes. In millimeter wavelengths, we observe the rotationally excited spectra of gas-phase molecules, which act like a unique molecular fingerprint at a particular frequency. These spectra serve as powerful proxies for the physical conditions of these natal environments, helping us directly correlate chemistry with physical parameters.</p>
+
+    <p>These fundamental questions are explored using high-resolution millimeter-wavelength observations as part of the <a href="https://nascent-stars.cnrs.fr/" target="_blank" style="color:var(--cyan); font-weight:600; text-decoration:underline;">NASCENT-stars</a> large program (PI: T. Csengeri), which targets 17 massive and dense regions of the Cygnus-X molecular cloud complex. I study two such regions: CygX-N53 and CygX-N30, offering a compelling opportunity to compare the chemistry of sources differing in age, mass, and physical conditions.</p>
+  </div>
+</div></section>
+
+<section id="publications"><div class="container">
+ <div class="section-title"><h2>Publications</h2><p>Peer-reviewed articles, survey findings, and observational analyses.</p></div>
+ <div class="card">
+  
+  <div class="pub">
+    <span class="year">In Prep</span>
+    <h3>NOEMA Astrochemistry of Cygnus-X Protostars (<a href="https://nascent-stars.cnrs.fr/" style="color:var(--cyan)">NASCENT-Stars</a>) I. Continuum analysis of CygX-N53</h3>
+    <p class="muted"><strong>D. Panda</strong>, T. Csengeri, et al. · (To be submitted)</p>
+  </div>
+  
+  <div class="pub">
+    <span class="year">2026</span>
+    <h3>ALMA-IMF. XXII. Role of Core Subfragmentation in the IMF Origin: Hierarchical Mass Cascade in W43-MM1</h3>
+    <p class="muted">F. Motte, N. Le Nestour, R. Veyry, N. Brouillet, T. Nony, B. Thomasson, F. Louvet, I. Joncour, E. Moraux, A. Men'shchikov, T. Yoo, A. Ginsburg, A. Gusdorf, A. M. Stutz, R. Galvan-Madrid, T. Csengeri, R. H. Alvarez-Gutierrez, M. Armante, Y. Bernard, M. Bonfand, S. Chevalier, N. Cunningham, P. Dell'Ova, M. Gonzalez, A. Koley, F. A. Olguin, <strong>D. Panda</strong>, Y. Pouteau, J. Salinas, P. Sanhueza, N. A. Sandoval-Garrido, M. Valeille-Manet · Astronomy & Astrophysics · DOI: <a href="https://doi.org/10.1051/0004-6361/202660192" target="_blank" style="color:var(--cyan)">10.1051/0004-6361/202660192</a></p>
+  </div>
+  
+  <div class="pub">
+    <span class="year">2025</span>
+    <h3>Tertiary Tides with Eccentric Orbits</h3>
+    <p class="muted">Y. Gao, T. Boekholt, <strong>D. Panda</strong>, T. Akiba, S. Toonen · MNRAS · DOI: <a href="https://doi.org/10.1093/mnras/staf1460" target="_blank" style="color:var(--cyan)">10.1093/mnras/staf1460</a></p>
+  </div>
+
+ </div>
+</div></section>
+
+<section id="cv"><div class="container">
+ <div class="section-title"><h2>Curriculum Vitae</h2><p>A concise overview of research experience and education.</p></div>
+ <div class="grid2">
+  <div class="timeline">
+   <article><h3>Visiting Researcher</h3><p class="muted">I. Institute of Physics (PH1), University of Cologne, Germany (Mar 2026–May 2026)<br>Funded by DAAD</p></article>
+   <article><h3>PhD, Infinity&sup2; International Graduate Program</h3><p class="muted">Laboratoire d'Astrophysique de Bordeaux (LAB), France (Sept 2024–Ongoing)<br>Thesis: "Origin of Complex Organic Molecules (COMs) in Massive Star-Forming Regions"</p></article>
+   <article><h3>Junior Research Fellow</h3><p class="muted">Indian Institute of Space Science and Technology (IIST), India (Jun 2023–Mar 2024)</p></article>
+   <article><h3>M.Sc. Physics (Astronomy & Astrophysics)</h3><p class="muted">Pondicherry University, India (Oct 2020–Jun 2022)<br>Result: 90.07% with Distinction</p></article>
+  </div>
+  <div class="card" style="position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; min-height: 380px; overflow: hidden; padding: 24px;">
+    <div style="position: absolute; inset: 0; background: linear-gradient(rgba(11, 16, 32, 0.75), rgba(11, 16, 32, 0.95)), url('assets/cv-preview.jpg') center top / cover no-repeat; filter: blur(1.5px);"></div>
+    <a class="btn primary" href="assets/Devismita_Panda_CV.pdf" target="_blank" style="position: relative; z-index: 2; padding: 14px 24px; font-size: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.8);">Download Full CV (PDF)</a>
+  </div>
+ </div>
+</div></section>
+
+<section id="gallery"><div class="container">
+ <div class="section-title"><h2>Gallery</h2><p>Observatory visits, public outreach events, and scientific conferences.</p></div>
+ <div class="grid3">
+  <div class="card" style="padding:16px;">
+    <img class="gallery-img" src="assets/gallery_1.jpg" alt="Solar observation session at the University of Bordeaux">
+    <p class="muted small" style="margin: 12px 0 0;">Solar observation session with a 3" reflector telescope at the University of Bordeaux library.</p>
+  </div>
+  <div class="card" style="padding:16px;">
+    <img class="gallery-img" src="assets/gallery_2.jpg" alt="Night sky observation at ACSTI, Trivandrum">
+    <p class="muted small" style="margin: 12px 0 0;">Leading a night sky observation event with an 8" reflector telescope in Trivandrum.</p>
+  </div>
+  <div class="card" style="padding:16px;">
+    <img class="gallery-img" src="assets/gallery_3.jpg" alt="Poster presentation at COST NanoSpace">
+    <p class="muted small" style="margin: 12px 0 0;">Presenting <a href="https://nascent-stars.cnrs.fr/" style="color:var(--cyan)">NASCENT-stars</a> research poster at the COST NanoSpace Training School in Espoo, Finland.</p>
+  </div>
+ </div>
+</div></section>
+
+<section id="contact"><div class="container">
+ <div class="section-title"><h2>Contact</h2><p>For collaborations, scientific discussions, and opportunities.</p></div>
+ <div class="card">
+  <p><strong>Email:</strong> <a href="mailto:devismita.panda@u-bordeaux.fr" style="color:var(--cyan)">devismita.panda@u-bordeaux.fr</a></p>
+  <p><strong>Institution:</strong> Laboratoire d'Astrophysique de Bordeaux (LAB), University of Bordeaux</p>
+  <p><strong>Profiles:</strong> <a href="https://orcid.org/0009-0000-6922-1299" target="_blank" style="color:var(--cyan)">ORCID</a> · <a href="https://www.linkedin.com/in/devismita-panda-cosmic" target="_blank" style="color:var(--cyan)">LinkedIn</a> · <a href="https://github.com/" style="color:var(--cyan)">GitHub</a></p>
+ </div>
+</div></section>
+
+<footer><div class="container">
+ <p>© 2026 Devismita Panda · Astrophysics & Astrochemistry</p>
+</div></footer>
+</body>
+</html>
