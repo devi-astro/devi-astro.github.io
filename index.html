@@ -63,7 +63,7 @@ footer a{color:var(--cyan)}
   position: fixed;
   bottom: 28px;
   right: 28px;
-  z-index: 99;
+  z-index: 999; /* Increased z-index */
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -231,11 +231,13 @@ footer a{color:var(--cyan)}
 <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
 <script>
   const backToTopBtn = document.querySelector('.back-to-top');
-  const aboutSection = document.querySelector('#about');
+  const heroSection = document.querySelector('#home');
 
   function toggleBackToTop() {
-    // Show button only after scrolling down near the #about section
-    if (window.scrollY >= aboutSection.offsetTop - 150) {
+    const heroRect = heroSection.getBoundingClientRect();
+    
+    // Show button only when the hero section has scrolled off the top of the screen
+    if (heroRect.bottom <= 100) {
       backToTopBtn.classList.add('visible');
     } else {
       backToTopBtn.classList.remove('visible');
@@ -243,7 +245,8 @@ footer a{color:var(--cyan)}
   }
 
   window.addEventListener('scroll', toggleBackToTop);
-  toggleBackToTop(); // Run check immediately on load
+  window.addEventListener('resize', toggleBackToTop);
+  toggleBackToTop(); // Initial check on page load
 </script>
 </body>
 </html>
