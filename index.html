@@ -228,22 +228,22 @@ footer a{color:var(--cyan)}
 <footer><div class="container">
  <p>© 2026 Devismita Panda · Astrophysics & Astrochemistry</p>
 </div></footer>
+<a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
 <script>
   const backToTopBtn = document.querySelector('.back-to-top');
-  const heroSection = document.querySelector('#home');
+  const aboutSection = document.querySelector('#about');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      // Hide button when hero section is visible; show it when scrolled past #home
-      if (!entry.isIntersecting) {
-        backToTopBtn.classList.add('visible');
-      } else {
-        backToTopBtn.classList.remove('visible');
-      }
-    });
-  }, { threshold: 0.1 });
+  function toggleBackToTop() {
+    // Show button only after scrolling down near the #about section
+    if (window.scrollY >= aboutSection.offsetTop - 150) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }
 
-  observer.observe(heroSection);
+  window.addEventListener('scroll', toggleBackToTop);
+  toggleBackToTop(); // Run check immediately on load
 </script>
 </body>
 </html>
