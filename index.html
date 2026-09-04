@@ -13,21 +13,27 @@
   --bg:#050812; --panel:#0b1020; --panel2:#10182c; --text:#eef3ff;
   --muted:#a8b4ca; --line:rgba(255,255,255,.10); --cyan:#6ee7ff;
   --violet:#a78bfa; --gold:#f6c76d; 
-  --max:1280px; /* INCREASED for wider desktop viewing */
+  --max:1280px; 
 }
 *{box-sizing:border-box;scroll-behavior:smooth}
 body{margin:0;background:radial-gradient(circle at 80% 5%,#16245a 0,transparent 28%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.7; font-size: 16px;}
-a{color:inherit;text-decoration:none; transition: color 0.2s ease;}
-.container{max-width:var(--max);margin:auto;padding:0 32px} /* Increased padding slightly */
+a{color:inherit;text-decoration:none; transition: all 0.2s ease;}
+.container{max-width:var(--max);margin:auto;padding:0 32px} 
 
 nav{position:fixed;z-index:20;top:0;left:0;right:0;background:rgba(5,8,18,.72);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 .navin{height:72px;display:flex;align-items:center;justify-content:space-between}
 .brand{font-family:"Space Grotesk";font-weight:700;letter-spacing:.3px; font-size: 18px;}
 .brand span{color:var(--cyan)}
 .navlinks{display:flex;gap:28px;font-size:14px;color:var(--muted); font-weight: 500;}
-.navlinks a:hover{color:var(--cyan)} /* Enhanced desktop hover */
+.navlinks a:hover{color:var(--cyan)} 
+/* NEW: Active link styling to keep it highlighted and glowing */
+.navlinks a.active {
+  color: var(--cyan);
+  text-shadow: 0 0 12px rgba(110, 231, 255, 0.4);
+}
 
-.hero{min-height:92vh;display:grid;place-items:center;padding:120px 0 70px;position:relative;overflow:hidden}
+/* FIXED: Changed min-height from 92vh to 100vh to fill the screen */
+.hero{min-height:100vh;display:grid;place-items:center;padding:120px 0 70px;position:relative;overflow:hidden}
 .hero:before {
   content: "";
   position: absolute;
@@ -44,9 +50,9 @@ h1{font-size:clamp(44px,7vw,84px);margin:16px 0 24px;max-width:800px}
 
 .btns{display:flex;gap:16px;flex-wrap:wrap;margin-top:32px}
 .btn{padding:14px 22px;border-radius:10px;border:1px solid var(--line);background:rgba(255,255,255,.06);font-weight:600;font-size:15px; transition: all 0.3s ease; cursor: pointer;}
-.btn:hover {background: rgba(255,255,255,.12); transform: translateY(-2px);} /* Desktop hover */
+.btn:hover {background: rgba(255,255,255,.12); transform: translateY(-2px);} 
 .btn.primary{background:linear-gradient(135deg,var(--cyan),var(--violet));color:#07101d;border:0}
-.btn.primary:hover{box-shadow: 0 8px 25px rgba(110, 231, 255, 0.3); transform: translateY(-2px);} /* Desktop hover */
+.btn.primary:hover{box-shadow: 0 8px 25px rgba(110, 231, 255, 0.3); transform: translateY(-2px);} 
 
 .portrait-wrap{justify-self:end;position:relative}
 .portrait {
@@ -65,7 +71,6 @@ section{padding:110px 0;border-top:1px solid var(--line)}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:30px}
 .grid3{display:grid;grid-template-columns:repeat(3, 1fr);gap:30px}
 
-/* Desktop card hover effects */
 .card{background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.025));border:1px solid var(--line);border-radius:18px;padding:32px; transition: transform 0.3s ease, box-shadow 0.3s ease;}
 .card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.4); border-color: rgba(255,255,255,0.2); }
 .card h3{margin-top:0;font-size:24px; margin-bottom:12px;}
@@ -79,7 +84,7 @@ section{padding:110px 0;border-top:1px solid var(--line)}
 .timeline{border-left:1px solid rgba(110,231,255,.3);padding-left:30px}.timeline article{position:relative;margin:0 0 32px}.timeline article:before{content:"";width:11px;height:11px;border-radius:50%;background:var(--cyan);position:absolute;left:-36px;top:8px}
 
 .gallery-img{width:100%; height:280px; object-fit:cover; border-radius:12px; border:1px solid var(--line); transition: transform 0.4s ease;}
-.card:hover .gallery-img { transform: scale(1.02); } /* Desktop image zoom on hover */
+.card:hover .gallery-img { transform: scale(1.02); } 
 
 footer{padding:50px 0 70px;color:var(--muted);font-size:14px; text-align: center;}
 footer a{color:var(--cyan)}
@@ -90,13 +95,12 @@ footer a:hover{text-decoration: underline;}
 .narrative p:last-child { margin-bottom: 0; }
 .q-hl { color: var(--cyan); font-weight: 500; }
 
-/* Keep Mobile responsiveness so it doesn't break on phones */
 @media(max-width:800px){
  .navlinks{display:none}
  .hero .container,.grid2,.grid3{grid-template-columns:1fr; gap: 40px;}
  .hero{padding-top:110px}.portrait-wrap{justify-self:start}
  .section-title{display:block}.section-title p{margin-top:12px}
- .card:hover { transform: none; box-shadow: none; } /* Disable hover lift on touch devices */
+ .card:hover { transform: none; box-shadow: none; } 
 }
 
 .back-to-top {
@@ -126,7 +130,6 @@ footer a:hover{text-decoration: underline;}
 </style>
 </head>
 <body>
-<!-- Rest of the HTML remains exactly the same as your original snippet -->
 <nav><div class="container navin">
   <a class="brand" href="#home">Devismita <span>Panda</span></a>
   <div class="navlinks">
@@ -260,14 +263,14 @@ footer a:hover{text-decoration: underline;}
  <p>© 2026 Devismita Panda · Astrophysics & Astrochemistry</p>
 </div></footer>
 <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+
 <script>
+  // 1. Back to Top Button Logic
   const backToTopBtn = document.querySelector('.back-to-top');
   const heroSection = document.querySelector('#home');
 
   function toggleBackToTop() {
     const heroRect = heroSection.getBoundingClientRect();
-    
-    // Show button only when the hero section has scrolled off the top of the screen
     if (heroRect.bottom <= 100) {
       backToTopBtn.classList.add('visible');
     } else {
@@ -277,7 +280,38 @@ footer a:hover{text-decoration: underline;}
 
   window.addEventListener('scroll', toggleBackToTop);
   window.addEventListener('resize', toggleBackToTop);
-  toggleBackToTop(); // Initial check on page load
+  toggleBackToTop(); 
+
+  // 2. Active Navigation Highlighting Logic (NEW)
+  const sections = document.querySelectorAll('section, header');
+  const navLinks = document.querySelectorAll('.navlinks a');
+
+  const observerOptions = {
+    root: null,
+    // Triggers when the section crosses roughly the middle of the screen
+    rootMargin: '-30% 0px -60% 0px', 
+    threshold: 0
+  };
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        // Clear all active states first
+        navLinks.forEach(link => link.classList.remove('active'));
+        
+        // Add active state to the matching link (if it exists)
+        const activeLink = document.querySelector(`.navlinks a[href="#${id}"]`);
+        if (activeLink) {
+          activeLink.classList.add('active');
+        }
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => {
+    sectionObserver.observe(section);
+  });
 </script>
 </body>
 </html>
